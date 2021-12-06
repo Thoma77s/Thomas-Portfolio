@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #f00000;
+    --secondary-color: #ffffff;
+    --teritary-color: #152238;
+
+}
+
+header {
+    padding: 20px 35px;
+    background-color: var(--teritiary-color);
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-color);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    z-index: 9999;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--teritiary-color);
+}
+
+header a{
+    color: var(--primary-color);
+}
+header a{
+    text-decoration: none;
+    color: var(--teritary-color);
+}
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    list-style: none;
+}
+
+header nav ul li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    list-style: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 2.55vw;
+    font-style: bold;
+}
+header nav ul li a:hover {
+    background: var(--secondary-color);
+    color: var(--teritary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background: var(--primary-color);
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer h2 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0;
+}
+
+footer div {
+    line-height: 1.5;
+    text-align: right;
+}
+
+footer a {
+    color: var(--secondary-color);
+}
+
+.section {
+    padding: 60px;
+}
+
+
+/* fix hero background image */
+.hero {
+    background-image:url(https://images.app.goo.gl/A9WHkD1vRFayBwP16);
+    background-size: cover;
+    background-position: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    background-attachment: fixed;   
+}

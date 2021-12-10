@@ -167,6 +167,10 @@ section h3 {
 
 /*About Me styles */
 
+.about-me p {
+    padding: 15px 10px 10px 10px;
+}
+
 
 /*work styles */
 

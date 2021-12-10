@@ -57,6 +57,7 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 2.55vw;
     font-style: bold;
+    font-family: impact, Haettenschweiler;
     background: var(--teritary-color)
     
 }
@@ -111,7 +112,29 @@ section h3 {
     border-bottom: 5px solid var(--secondary-color);
     padding-bottom: 15px;
     padding-top: 15px;
-    font-family: fantasy Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 5px;
+    font-family: impact, Haettenschweiler;
+    font-style: oblique;
+    font-size: 25px;
+    font-variant: small-caps;
+}
+
+.work:hover > h3 {
+    background: var(--secondary-color);
+    text-shadow: 0 0 10px rgb(252, 251, 251);
+    color: var(--teritary-color);
+}
+
+.about-me:hover > h3 {
+    background: var(--secondary-color);
+    text-shadow: 0 0 10px rgb(252, 251, 251);
+    color: var(--teritary-color);
+}
+
+.contact-info:hover > h3 {
+    background: var(--secondary-color);
+    text-shadow: 0 0 10px rgb(252, 251, 251);
+    color: var(--teritary-color);
 }
 
 /* fix hero background image */
@@ -123,7 +146,7 @@ section h3 {
     flex-wrap: wrap; 
     align-items: flex-end;
     background-attachment: fixed;
-    height: 200px;
+    height: 300px;
     align-content: flex-end;  
 }
 
@@ -131,7 +154,12 @@ section h3 {
     color: var(--teritary-color);
     font-size: 50px;
     font-style: bold;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    font-family: impact, Haettenschweiler;
+}
+
+.profile {
+    padding-right: 5px;
 }
 
 
@@ -220,7 +248,7 @@ section h3 {
 .contact-info nav ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     list-style: none;
@@ -235,6 +263,22 @@ section h3 {
 
 .contact-info img {
     height: 50px;
+    opacity: 0.5;
+}
+
+.contact-info img:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 575px) {
+    .contact-info li {
+        height: 50%;
+        width: 50%;
+        margin: auto;
+    }
+    .contact-info ul {
+        margin: auto;
+    }
 }
 
 

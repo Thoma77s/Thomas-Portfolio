@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
+import About from '../About';
+import Projects from '../Projects';
+import Contact from '../Contact';
+import Resume from '../Resume';
+import Navigation from '../Nav';
+
+
 
 function Header() {
-    const [currentPage, handlePageChange] = useState('About');
+     const [currentPage, handlePageChange] = useState("About");
 
     const renderPage = () => {
         switch(currentPage) {
@@ -12,33 +19,35 @@ function Header() {
             case "Contact":
                 return <Contact />;
             case "Resume":
-                return <Resume />;
-
+                return <About />;
             default:
                 return <About />;
         }
 
     }
     return (
-        <section class="hero">
-        <h2>Thomas Siffermann </h2>
-        <div class="profile">
-            <img src="../Thomas-Portfolio/assets/Images/93266303.jfif" style="height: 150px; border-radius: 50%; border: 5px solid black;"/>
-        </div>
         <div>
-      <nav className="navbar">
-        <div className="navbar-brand">
-        </div>
-      </nav>
-      <Navigation
-        currentPage={currentPage}
-        handlePageChange={handlePageChange}
-      />
-      <main>
-        <div>{renderPage(currentPage)}</div>
-      </main>
-        </div>
-    </section>
+        <nav className="navbar">
+          <div className="navbar-brand">
+            <a
+              className="navbar-item"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <h2 className="header" >Thomas Siffermann</h2>
+            </a>
+          </div>
+        </nav>
+        {/* Pass the state value and the setter as props to NavTabs */}
+        <Navigation
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+        />
+        {/* Call the renderPage function passing in the currentPage */}
+        <main>
+          <div>{renderPage(currentPage)}</div>
+        </main>
+      </div>
     );
 }
 
